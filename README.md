@@ -24,6 +24,7 @@
 - [API](#api)
   - [`PeerInfo.create([id, ] callback)`](#peerinfocreateid-callback)
   - [`new PeerInfo(id)`](#new-peerinfoid)
+  - [`.id`](#id)
   - [`.connect(ma)`](#connectma)
   - [`.disconnect()`](#connectma)
   - [`.isConnected()`](#connectma)
@@ -101,7 +102,11 @@ for it.
 
 Creates a new PeerInfo instance from an existing PeerId.
 
-### `multiaddrs`
+### `.id`
+
+The [PeerId](https://github.com/libp2p/js-peer-id) of the peer this info relates to.
+
+### `.multiaddrs`
 
 A list of multiaddresses instances that `peer` can be reached at.
 

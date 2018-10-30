@@ -35,9 +35,9 @@ class PeerInfo {
 }
 
 PeerInfo.create = async (peerId) => {
-  if (typeof peerId === 'undefined') {
+  if (peerId == null) {
     peerId = await PeerId.create()
-  } else if (peerId && typeof peerId.toJSON !== 'function') {
+  } else if (!PeerId.isPeerId(peerId)) {
     peerId = await PeerId.createFromJSON(peerId)
   }
 

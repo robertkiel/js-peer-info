@@ -26,9 +26,9 @@ class PeerInfo {
   // only stores the current multiaddr being used
   connect (ma) {
     ma = ensureMultiaddr(ma)
-    if (!this.multiaddrs.has(ma) && ma.toString() !== `/ipfs/${this.id.toB58String()}`) {
-      throw new Error('can\'t be connected to missing multiaddr from set')
-    }
+    // if (!this.multiaddrs.has(ma) && ma.toString() !== `/ipfs/${this.id.toB58String()}`) {
+    //   throw new Error('can\'t be connected to missing multiaddr from set')
+    // }
     this._connectedMultiaddr = ma
   }
 
